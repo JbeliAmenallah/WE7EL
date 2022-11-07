@@ -1,0 +1,110 @@
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/icon">
+    <title>Connect</title>
+
+    <link rel="stylesheet" type="text/css" href="connect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" />
+    </link>
+    </link>
+    <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+    <script src="sec.js" defer></script>
+
+
+</head>
+
+<body style="margin-top: 10px;" onload="show()">
+
+    <script language="javascript" src="sec.js"></script>
+    <div class="container" id="container" style="transform: translate(0px, 0px); opacity: 1;margin-top: 100px;">
+        <div class="form-container sign-up-container">
+
+
+
+                                                        <!--sign up form-->    
+            
+            <form action="connect.html" class="" method="post" autocomplete="off" >
+                <h1 style="margin-bottom: 77px;">Create Account .</h1>
+                <input type="text"name="name" placeholder="Name" required oninvalid="this.setCustomValidity('Name is required');"
+                oninput="this.setCustomValidity('');"/>
+                <input type="text"name="username" placeholder="Username" required oninvalid="this.setCustomValidity('UserName is required');"
+                oninput="this.setCustomValidity('');"/>
+                <input type="email"  naem="email" placeholder="example@mail.com"  required />
+                <input type="password" name="password" placeholder="Password" required />
+
+                <input type="password" name="confpassword" placeholder="Password confirmation" required/>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <button type="submit"  ><i class="fas fa-arrow-alt-circle-right"></i></button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+
+
+                                                    <!--sign in form-->
+            <form action="connect.html" name="f">
+                <h1 style="margin-bottom: 30px;">Sign in .</h1>
+                <input type="email" placeholder="example@mail.com" name="ladd" required/>
+                <input type="password" placeholder="Password"  name="pwd" required/>
+                <span>
+                    <i class="fa fa-eye"  id="font" alt=" SHOW PASSWORD " onclick="togglepw()" aria-hidden="true"></i>
+                </span>
+                <a href="#"><strong>Forgot password ?</strong></a> <br>
+                <div class="social-container" style="margin-right: 48px;">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <button type="submit"  ><i class="fas fa-arrow-alt-circle-right"></i></button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left"> 
+
+
+                                                  <!--backgrounds-->
+
+                    <h1 style="margin-bottom: 40px;">We got <br> our hero back !</h1>
+                    <p>One click below integrate You again ! Don't hesitate</p>
+                    <button class="ghost" id="signIn" type="button" > Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 style="margin-bottom: 40px;">Hello Helper ! </h1>
+                    <p style="font: size 1.5em; ;">The best thing about helping others 
+                        <br>is that it makes us feel good about ourselves.</p>
+                    <button class="ghost" id="signUp" type="button" > Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script language="javascript">
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+</body>
+
+</html>
